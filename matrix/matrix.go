@@ -6,7 +6,7 @@ import (
 	"math"
 )
 
-func Test() {
+func Calculate() error {
 	mat := NewMatrixFromArray(
 		[][]float64{
 			{-2, 1, 0, 0, 0, 1},
@@ -32,6 +32,8 @@ func Test() {
 
 	y := GaussSeidel(augMat, b)
 	fmt.Println(y)
+
+	return nil
 }
 
 
