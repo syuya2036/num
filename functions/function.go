@@ -47,11 +47,9 @@ func Cos(x float64) float64 {
 func Factorial(x int) int {
 	var ans int
 
-	if x == 0 {
-		ans = 1
-		return ans
+	for i := 1; i <= x; i++ {
+		ans *= i
 	}
-
-	ans = Factorial(x-1) * x
+	
 	return ans
 }
