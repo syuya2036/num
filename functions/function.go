@@ -45,7 +45,7 @@ func Cos(x float64) float64 {
 }
 
 func Factorial(x int) int {
-	var ans int
+	ans := 1
 
 	for i := 1; i <= x; i++ {
 		ans *= i
