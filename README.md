@@ -9,9 +9,9 @@ mathパッケージを使用せずに、テスト駆動開発(TDD)で行いま�
 -  連立方程式を解く -> [Matrix](https://github.com/syuya2036/num/tree/main/matrix)
 - sin関数, cos関数 -> [Function](https://github.com/syuya2036/num/tree/main/function)
 - newton法, はさみうち法 -> [Newton](https://github.com/syuya2036/num/tree/main/newton)
-    - newton法の表 -> 
+    - newton法の表 -> [表](https://github.com/syuya2036/num/blob/main/docs/newton.md)
 
 - 最小二乗法 -> [Regression](https://github.com/syuya2036/num/tree/main/regression)
-    - グラフ ->　
+    - グラフ ->　[グラフ](https://github.com/syuya2036/num/blob/main/docs/reg.png)
 
 - 定数を定義 -> [Constant](https://github.com/syuya2036/num/tree/main/constant)
