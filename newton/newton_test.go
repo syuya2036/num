@@ -2,6 +2,7 @@ package newton
 
 import (
 	"testing"
+	"os"
 
 	"github.com/syuya2036/num/functions"
 	c "github.com/syuya2036/num/constant"
@@ -12,16 +13,25 @@ func TestNewton(t *testing.T) {
 	f1 := func(x float64) float64 {
 		return x*x - 3
 	}
-	x1 := Newton(f1, 1.5)
+	x1, precs := Newton(f1, 1.5)
 	if functions.Abs(x1-1.73205080756) > 1e-6 {
 		t.Errorf("Test case 1 failed: expected %v, but got %v", 1.73205080756, x1)
 	}
+
+	file, err := os.Create("../docs/newton.md")
+	if err != nil {
+		t.Errorf("Error: %v", err)
+	}
+	defer file.Close()
+
+	file.WriteString(precs)
+
 
 	// Test case 2: f(x) = x^3 - 2x - 5, x0 = 2
 	f2 := func(x float64) float64 {
 		return x*x*x - 2*x - 5
 	}
-	x2 := Newton(f2, 2)
+	x2, _ := Newton(f2, 2)
 	if functions.Abs(x2-2.0945514815423265) > 1e-6 {
 		t.Errorf("Test case 2 failed: expected %v, but got %v", 2.0945514815423265, x2)
 	}
