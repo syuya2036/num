@@ -8,27 +8,6 @@ import (
 	c "github.com/syuya2036/num/constant"
 )
 
-func TestFactorial(t *testing.T) {
-	testCases := []struct {
-		input int
-		want  int
-	}{
-		{0, 1},
-		{1, 1},
-		{2, 2},
-		{3, 6},
-		{4, 24},
-		{5, 120},
-	}
-
-	for _, tc := range testCases {
-		got := Factorial(tc.input)
-		if got != tc.want {
-			t.Errorf("Factorial(%d) = %d; want %d", tc.input, got, tc.want)
-		}
-	}
-}
-
 func TestSin(t *testing.T) {
 	testCases := []struct {
 		input float64

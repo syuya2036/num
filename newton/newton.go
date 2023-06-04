@@ -1,8 +1,8 @@
-package functions
+package newton
 
 import (
+	"github.com/syuya2036/num/functions"
 	c "github.com/syuya2036/num/constant"
-
 )
 
 func Newton(f func(float64) float64, x float64) float64 {
@@ -11,7 +11,7 @@ func Newton(f func(float64) float64, x float64) float64 {
 	for i := 0; i < maxIter; i++ {
 		fx := f(x)
 
-		if Abs(fx) <= c.Eps {
+		if functions.Abs(fx) <= c.Eps {
 			break // 収束判定を満たした場合、反復を終了
 		}
 
@@ -35,7 +35,7 @@ func Pincer(f func(float64) float64, xc float64, a, b float64) float64 {
 		xc = (a*fb - b*fa) / (fb - fa)
 		fxc := f(xc)
 
-		if Abs(fxc) <= c.Eps {
+		if functions.Abs(fxc) <= c.Eps {
 			break // 収束判定を満たした場合、反復を終了
 		}
 

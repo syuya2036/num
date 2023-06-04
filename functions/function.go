@@ -44,16 +44,6 @@ func Cos(x float64) float64 {
 	return 1 - x*x/2 + x*x*x*x/24 - x*x*x*x*x*x/720 + x*x*x*x*x*x*x*x/40320 - x*x*x*x*x*x*x*x*x*x/3628800 + x*x*x*x*x*x*x*x*x*x*x*x/479001600
 }
 
-func Factorial(x int) int {
-	ans := 1
-
-	for i := 1; i <= x; i++ {
-		ans *= i
-	}
-	
-	return ans
-}
-
 func Abs(x float64) float64 {
 	if x < 0 {
 		return -x
