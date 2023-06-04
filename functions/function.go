@@ -4,11 +4,6 @@ import (
 	c "github.com/syuya2036/num/constant"
 )
 
-type Function interface {
-	F(float64) float64
-	Diff(float64) float64
-}
-
 func Sin(x float64) float64 {
 	if x == 0 {
 		return 0
@@ -57,4 +52,12 @@ func Factorial(x int) int {
 	}
 	
 	return ans
+}
+
+func Abs(x float64) float64 {
+	if x < 0 {
+		return -x
+	}
+
+	return x
 }
