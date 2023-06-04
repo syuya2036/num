@@ -1,8 +1,13 @@
-package function
+package functions
 
 import (
 	c "github.com/syuya2036/num/constant"
 )
+
+type Function interface {
+	F(float64) float64
+	Diff(float64) float64
+}
 
 func Sin(x float64) float64 {
 	if x == 0 {

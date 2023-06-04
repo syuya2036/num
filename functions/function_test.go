@@ -1,12 +1,11 @@
 // BEGIN: 7d5c8f7d7c8c
-package function_test
+package functions
 
 import (
 	"testing"
 	"math"
 
 	c "github.com/syuya2036/num/constant"
-	"github.com/syuya2036/num/functions"
 )
 
 func TestFactorial(t *testing.T) {
@@ -23,7 +22,7 @@ func TestFactorial(t *testing.T) {
 	}
 
 	for _, tc := range testCases {
-		got := function.Factorial(tc.input)
+		got := Factorial(tc.input)
 		if got != tc.want {
 			t.Errorf("Factorial(%d) = %d; want %d", tc.input, got, tc.want)
 		}
@@ -49,7 +48,7 @@ func TestSin(t *testing.T) {
 
 	eps := 1e-6
 	for _, tc := range testCases {
-		got := function.Sin(tc.input)
+		got := Sin(tc.input)
 		if math.Abs(got - tc.want) > eps {
 			t.Errorf("Sin(%f) = %f; want %f", tc.input, got, tc.want)
 		}
@@ -76,7 +75,7 @@ func TestCos(t *testing.T) {
 
 	eps := 1e-6
 	for _, tc := range testCases {
-		got := function.Cos(tc.input)
+		got := Cos(tc.input)
 		if math.Abs(got - tc.want) > eps {
 			t.Errorf("Cos(%f) = %f; want %f", tc.input, got, tc.want)
 		}
