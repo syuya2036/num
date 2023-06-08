@@ -7,7 +7,7 @@ mathパッケージを使用せずに、テスト駆動開発(TDD)で行いま�
 ## 1. 前半課題
 
 -  連立方程式を解く -> [Matrix](https://github.com/syuya2036/num/tree/main/matrix)
-- sin関数, cos関数 -> [Function](https://github.com/syuya2036/num/tree/main/function)
+- sin関数, cos関数 -> [Function](https://github.com/syuya2036/num/tree/main/functions)
 - newton法, はさみうち法 -> [Newton](https://github.com/syuya2036/num/tree/main/newton)
     - newton法の表 -> [表](https://github.com/syuya2036/num/blob/main/docs/newton.md)
 

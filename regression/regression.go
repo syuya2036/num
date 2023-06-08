@@ -25,8 +25,8 @@ func LinearRegression(x, y Array1D) (float64, float64, error) {
 	}
 
 	// 最小二乗法
-	b := covXY / varianceX
-	a := meanY - b * meanX
+	a := covXY / varianceX
+	b := meanY - a * meanX
 
 	return a, b, nil
 }
