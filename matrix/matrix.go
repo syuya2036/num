@@ -3,38 +3,9 @@ package matrix
 import (
 	"bytes"
 	"fmt"
-	"math"
+
+	"github.com/syuya2036/num/functions"
 )
-
-func Calculate() error {
-	mat := NewMatrixFromArray(
-		[][]float64{
-			{-2, 1, 0, 0, 0, 1},
-			{1, -2, 1, 0, 0, 2},
-			{0, 1, -2, 1, 0, 3},
-			{0, 0, 1, -2, 1, 4},
-			{0, 0, 0, 1, -2, 5},
-		})
-
-	mat = mat.GaussianElimination()
-	fmt.Println(mat)
-
-	augMat := NewMatrixFromArray(
-		[][]float64{
-			{-2, 1, 0, 0, 0},
-			{1, -2, 1, 0, 0},
-			{0, 1, -2, 1, 0},
-			{0, 0, 1, -2, 1},
-			{0, 0, 0, 1, -2},
-		})
-
-	b := NewMatrix([]float64{1,2,3,4,5}, 1, 5)
-
-	y := GaussSeidel(augMat, b)
-	fmt.Println(y)
-
-	return nil
-}
 
 
 // GaussSeidelは、係数行列matと定数ベクトルyを受け取り、
@@ -59,7 +30,7 @@ func GaussSeidel(mat, y Matrix) Matrix {
 			}
 			x.Asign(0,i,sum/mat.Get(i,i))
 
-			diff += math.Abs(x.Get(0,i) - xBefore.Get(0,i)) // 差分の絶対値を加算
+			diff += functions.Abs(x.Get(0,i) - xBefore.Get(0,i)) // 差分の絶対値を加算
 		}
 
 		if diff < eps { // 収束条件を満たしたら終了
