@@ -90,8 +90,11 @@ func NewMatrix(mat []float64, rows, cols int) Matrix {
 }
 
 // 多次元配列ライクにアクセス
-func (mat Matrix) Get(i, j int) float64 {
-	return mat.Mat[i*mat.Cols+j]
+func (mat Matrix) Get(i ...int) float64 {
+	if len(i) == 1 {
+		return mat.Mat[i[0]]
+	}
+	return mat.Mat[i[0]*mat.Cols+i[1]]
 }
 
 // 指定した行に値をかける

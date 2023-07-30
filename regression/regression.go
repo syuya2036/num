@@ -3,7 +3,7 @@ package regression
 import "fmt"
 
 type Array1D interface {
-	Get(i int) float64
+	Get(i ...int) float64
 	Len() int
 	Mean() float64
 }

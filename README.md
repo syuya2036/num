@@ -11,3 +11,5 @@ mathパッケージを使用せずに、テスト駆動開発(TDD)で行いま�
 - newton法, はさみうち法 -> [Newton](https://github.com/syuya2036/num/tree/main/newton)
 - 最小二乗法 -> [Regression](https://github.com/syuya2036/num/tree/main/regression)
 - 定数を定義 -> [Constant](https://github.com/syuya2036/num/tree/main/constant)
+- 積分 -> [Integrate](./integrate/integrate.go)
+- 微分方程式 -> [Diff EQ](./integrate/diff.go)
